@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: up-zuul-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 1004
+zuul:
+  routes:
+    api-sys:
+      path: /api-sys/**
+      serviceId: up-platform-system-service
+    api-usr:
+      path: /api-usr/**
+      serviceId: up-platform-user-service
+    uaa:
+      path: /uaa/**
+      serviceId: up-auth-server
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:${server.port}/uaa/oauth/token
+      user-authorization-uri: http://localhost:${server.port}/uaa/oauth/authorize
+      client-id: client_2
+      client-secret: 123456
+    resource:
+      user-info-uri: http://localhost:${server.port}/uaa/user
+      prefer-token-info: false

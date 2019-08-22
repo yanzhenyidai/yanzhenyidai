@@ -1,0 +1,9 @@
+server:
+  port: 1004
+spring:
+  application:
+    name: up-auth-server
+  redis:
+    host: yanzhenyidai.com
+    port: 6379
+    password: Baidu@2019

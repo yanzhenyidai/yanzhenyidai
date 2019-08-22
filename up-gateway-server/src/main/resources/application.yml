@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: up-gateway-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+server:
+  port: 1004
+zuul:
+  routes:
+    api-sys:
+      path: /api-sys/**
+      serviceId: up-platform-system-service
+    api-usr:
+      path: /api-usr/**
+      serviceId: up-platform-user-service
+

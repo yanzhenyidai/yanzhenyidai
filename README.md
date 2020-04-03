@@ -1,5 +1,5 @@
 
-# Learning SpringCloud
+# Learning Spring-Cloud-Netflix
 
 [![Build Status](https://travis-ci.com/yanzhenyidai/yanzhenyidai.svg?branch=master)](https://travis-ci.org/yanzhenyidai/yanzhenyidai)
 
